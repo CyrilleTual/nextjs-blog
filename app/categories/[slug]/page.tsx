@@ -1,4 +1,6 @@
-import React from 'react'
+import PostCard from "@/components/post-card";
+
+import { POSTS } from "@/utils/posts";
 
 type Params = {
   params: {
@@ -6,11 +8,39 @@ type Params = {
   };
 };
 
+export default function Caterorypage({ params }: Params) {
+ 
+  // en fonction du slug on retourne le nom de la catégorie (dans la db)
+ const value = (() => {
+   switch (params.slug) {
+     case "react":
+       return "React";
+     case "react-native":
+       return "React Native";
+     case "nextjs":
+       return "Next.js";
+     case "css":
+       return "CSS";
+     case "javascript":
+       return "JavaScript";
+     default:
+       return null; // or any default value you want
+   }
+ })();
+  
 
-export default function CategoriesPage({params} : Params) {
+ // on filtre les posts
+  const items = POSTS.filter((post) => post.category === value);
 
-  const {slug} = params; 
   return (
-    <div>Page de la catégorie {slug}</div>
-  )
+    <>
+    <h1>{items[0].category}</h1>
+       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-6">
+      {items.map((post) => (
+        <PostCard key={post.id} post={post} />
+      ))}
+    </div>
+    </>
+ 
+  );
 }
