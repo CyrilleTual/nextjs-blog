@@ -2,9 +2,8 @@
 
 import * as React from "react";
 import Link from "next/link";
-
 import { cn } from "@/lib/utils";
-import { Icons } from "@/components/icons";
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -17,28 +16,25 @@ import {
 import { CATEGORIES } from "@/utils/categories";
 import { Category } from "@/types";
 
-
 export function HeaderNavigation() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-  
         <NavigationMenuItem>
           <NavigationMenuTrigger>Categories</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className="grid w-[400px] gap-2 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {CATEGORIES.map((category: Category) => (
                 <ListItem
                   key={category.id}
-                   href={`/categories/${category.slug} `}
+                  href={`/categories/${category.slug} `}
                 >
-                    {category.name}
+                  {category.name}
                 </ListItem>
               ))}
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-
 
         <NavigationMenuItem>
           <Link href="/write" legacyBehavior passHref>

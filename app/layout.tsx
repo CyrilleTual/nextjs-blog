@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
 import Header from "@/components/header";
-
-const inter = Inter({ subsets: ["latin"] });
+import ThemeProvider from "@/providers/theme-provider";
 
 export const metadata: Metadata = {
   title: "Blog NextJs",
@@ -17,11 +14,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Header/>
-        {children}
-        <p>Footer</p>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Header />
+          {children}
+          <p>Footer</p>
+        </ThemeProvider>
       </body>
     </html>
   );
