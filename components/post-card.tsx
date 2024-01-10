@@ -32,7 +32,9 @@ export default function PostCard({ post }: Props) {
             <Image
               src={"/img/coding.jpg"}
               alt="post.title"
+              priority={false}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="aspact-sqauare object-cover transition-all duration-300 hover:scale-110 rounded-md"
             />
           </div>
@@ -41,12 +43,12 @@ export default function PostCard({ post }: Props) {
         </CardHeader>
 
         <CardFooter className="flex flex-row align-middle justify-evenly">
-          <Link
+          <div
             className={` ${badgeVariants({ variant: "outline" })} !p-2`}
-            href={`/categories/${post.category.toLowerCase()}`}
+            // href={`/categories/${post.category.toLowerCase()}`}
           >
             {post.category}
-          </Link>
+          </div>
           <div className="flex flex-row">
             <MessageCircle className="mr-2" /> {post.nbComments}
           </div>

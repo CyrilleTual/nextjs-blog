@@ -1,5 +1,5 @@
+import PageContainer from "@/components/page-container";
 import PostCard from "@/components/post-card";
-
 import { POSTS } from "@/utils/posts";
 
 type Params = {
@@ -34,13 +34,16 @@ export default function Caterorypage({ params }: Params) {
 
   return (
     <>
-    <h1>{items[0].category}</h1>
-       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-6">
-      {items.map((post) => (
-        <PostCard key={post.id} post={post} />
-      ))}
-    </div>
+      {items && (
+        <PageContainer>
+          <h1 className="text-center mt-2 ">{value}</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-6">
+            {items.map((post) => (
+              <PostCard key={post.id} post={post} />
+            ))}
+          </div>
+        </PageContainer>
+      )}
     </>
- 
   );
 }

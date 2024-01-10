@@ -15,6 +15,8 @@ export const POSTS: Post[] = [
     nbViews: 25,
     nbComments: 8,
     slug: "react-state-management-choosing-right-solution",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi laboriosam reprehenderit ipsum at quidem? Debitis nemo omnis itaque corrupti tempora expedita, alia sapiente veniam. Ad sequi ut quaerat dolores, sint incidunt  perspiciatis id eos cum similique ducimus magnam, alias vit  necessitatibus quia quae, illum autem voluptatum corporis.Consequatur ea voluptates delectus magnam, dolore ratione dictasapiente perspiciatis? Eaque id earum tenetur nesciunt eum amet rem quas quod. Dolore iure porro odit suscipit quo. Beatae molestias, iusto sapiente, adipisci alias eos ipsum fugit expeditavoluptatibus odio doloremque cupiditate earum asperiores aut atqueodit eius eos? Iusto vero ratione, vitae tempore quo neque!Consectetur non porro quo consequatur atque laboriosam obcaecati.Odit perspiciatis quisquam itaque voluptas enim suscipit inciduntlabore nulla deleniti, similique molestiae voluptatibus sit errorquibusdam est nostrum consequuntur aliquam optio reprehenderit quosipsa asperiores mollitia minus! Non quis dolorem molestiae optioneque consequatur nemo omnis natus voluptas.",
   },
   {
     id: 2,
@@ -29,6 +31,8 @@ export const POSTS: Post[] = [
     nbViews: 18,
     nbComments: 5,
     slug: "server-side-rendering-nextjs-practical-guide",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi laboriosam reprehenderit ipsum at quidem? Debitis nemo omnis itaque corrupti tempora expedita, alia sapiente veniam. Ad sequi ut quaerat dolores, sint incidunt  perspiciatis id eos cum similique ducimus magnam, alias vit  necessitatibus quia quae, illum autem voluptatum corporis.Consequatur ea voluptate porro quo consequatur atque laboriosam obcaecati.Odit perspiciatis quisquam itaque voluptas enim suscipit inciduntlabore nulla deleniti, similique molestiae voluptatibus sit errorquibusdam est nostrum consequuntur aliquam optio reprehenderit quosipsa asperiores mollitia minus! Non quis dolorem molestiae optioneque consequatur nemo omnis natus voluptas.",
   },
   {
     id: 3,
@@ -43,6 +47,8 @@ export const POSTS: Post[] = [
     nbViews: 32,
     nbComments: 10,
     slug: "building-cross-platform-mobile-apps-react-native",
+    content:
+      "Lorem ipsum dolor sit ametam est nostrum consequuntur aliquam optio reprehenderit quosipsa asperiores mollitia minus! Non quis dolorem molestiae optioneque consequatur nemo omnis natus voluptas.",
   },
   {
     id: 4,
@@ -57,6 +63,8 @@ export const POSTS: Post[] = [
     nbViews: 22,
     nbComments: 7,
     slug: "advanced-css-techniques-modern-web-design",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi laboriosam reprehenderit ipsum at quidem? Debitis nemo omnis itaque corrupti tempora expedita, alia sapiente veniam. Ad sequi ut quaerat dolores, sint incidunt  perspiciatis id eos cum similique ducimus magnam, alias vit  necessitatibus quia quae, illum autem voluptatum corporis.Consequatur ea voluptates delectus magnam, dolore ratione dictasapiente perspiciatis? Eaque id earum tenetur nesciunt eum amet rem quas quod. Dolore iure porro odit suscipit quo. Beatae molestias, iusto sapiente, adipisci alias eos ipsum fugit expeditavoluptatibus odio doloremque cupiditate earum asperiores aut atqueodit eius eos? Iusto vero ratione, vitae tempore quo neque!Consectetur non porro quo consequatur atque laboriosam obcaecati.Odit perspiciatis quisquam itaque voluptas enim suscipit inciduntlabore nulla deleniti, similique molestiae voluptatibus sit errorquibusdam est nostrum consequuntur aliquam optio reprehenderit quosipsa asperiores mollitia minus! Non quis dolorem molestiae optioneque consequatur nemo omnis natus voluptas.",
   },
   {
     id: 5,
@@ -71,6 +79,8 @@ export const POSTS: Post[] = [
     nbViews: 28,
     nbComments: 6,
     slug: "mastering-javascript-promises-asynchronous-programming",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi laboriosam reprehenderit ipsum at quidem? Debitis nemo omnis itaque corrupti tempora expedita, alia sapiente veniam. Ad sequi ut quaerat dolores, sint incidunt  perspiciatis id eos cum similique ducimus magnam, alias vit  necessitatibus quia quae, illum autem voluptatum corporis.Consequatur ea voluptates delectus magnam, dolore ratione dictasapiente perspiciatis? Eaque id earum tenetur nesciunt eum amet rem quas quod. Dolore iure porro odit suscipit quo. Beatae molestias, iusto sapiente, adipisci alias eos ipsum fugit expeditavoluptatibus odio doloremque cupiditate earum asperiores aut atqueodit eius eos? Iusto vero ratione, vitae tempore quo neque!Consectetur non porro quo consequatur atque laboriosam obcaecati.Odit perspiciatis quisquam itaque voluptas enim suscipit inciduntlabore nulla deleniti, similique molestiae voluptatibus sit errorquibusdam est nostrum consequuntur aliquam optio reprehenderit quosipsa asperiores mollitia minus! Non quis dolorem molestiae optioneque consequatur nemo omnis natus voluptas.",
   },
   {
     id: 6,
@@ -85,6 +95,8 @@ export const POSTS: Post[] = [
     nbViews: 35,
     nbComments: 9,
     slug: "building-reusable-react-components-best-practices",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi laboriosam reprehenderit ipsum at quidem? Debitis nemo omnis itaque corrupti tempora expedita, alia sapiente veniam. Ad sequi ut quaerat dolores, sint incidunt  perspiciatis id eos cum similique ducimus magnam, alias vit  necessitatibus quia quae, illum autem voluptatum corporis.Consequatur ea voluptates delectus magnam, dolore ratione dictasapiente perspiciatis? Eaque id earum tenetur nesciunt eum amet rem quas quod. Dolore iure porro odit suscipit quo. Beatae molestias, iusto sapiente, adipisci alias eos ipsum fugit expeditavoluptatibus odio doloremque cupiditate earum asperiores aut atqueodit eius eos? Iusto vero ratione, vitae tempore quo neque!Consectetur non porro quo consequatur atque laboriosam obcaecati.Odit perspiciatis quisquam itaque voluptas enim suscipit inciduntlabore nulla deleniti, similique molestiae voluptatibus sit errorquibusdam est nostrum consequuntur aliquam optio reprehenderit quosipsa asperiores mollitia minus! Non quis dolorem molestiae optioneque consequatur nemo omnis natus voluptas.",
   },
   {
     id: 7,
@@ -99,6 +111,8 @@ export const POSTS: Post[] = [
     nbViews: 19,
     nbComments: 4,
     slug: "dynamic-routes-nextjs-comprehensive-guide",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi laboriosam reprehenderit ipsum at quidem? Debitis nemo omnis itaque corrupti tempora expedita, alia sapiente veniam. Ad sequi ut quaerat dolores, sint incidunt  perspiciatis id eos cum similique ducimus magnam, alias vit  necessitatibus quia quae, illum autem voluptatum corporis.Consequatur ea voluptates delectus magnam, dolore ratione dictasapiente perspiciatis? Eaque id earum tenetur nesciunt eum amet rem quas quod. Dolore iure porro odit suscipit quo. Beatae molestias, iusto sapiente, adipisci alias eos ipsum fugit expeditavoluptatibus odio doloremque cupiditate earum asperiores aut atqueodit eius eos? Iusto vero ratione, vitae tempore quo neque!Consectetur non porro quo consequatur atque laboriosam obcaecati.Odit perspiciatis quisquam itaque voluptas enim suscipit inciduntlabore nulla deleniti, similique molestiae voluptatibus sit errorquibusdam est nostrum consequuntur aliquam optio reprehenderit quosipsa asperiores mollitia minus! Non quis dolorem molestiae optioneque consequatur nemo omnis natus voluptas.",
   },
   {
     id: 8,
@@ -113,6 +127,8 @@ export const POSTS: Post[] = [
     nbViews: 40,
     nbComments: 11,
     slug: "state-management-react-native-redux-context-api",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi laboriosam reprehenderit ipsum at quidem? Debitis nemo omnis itaque corrupti tempora expedita, alia sapiente veniam. Ad sequi ut quaerat dolores, sint incidunt  perspiciatis id eos cum similique ducimus magnam, alias vit  necessitatibus quia quae, illum autem voluptatum corporis.Consequatur ea voluptates delectus magnam, dolore ratione dictasapiente perspiciatis? Eaque id earum tenetur nesciunt eum amet rem quas quod. Dolore iure porro odit suscipit quo. Beatae molestias, iusto sapiente, adipisci alias eos ipsum fugit expeditavoluptatibus odio doloremque cupiditate earum asperiores aut atqueodit eius eos? Iusto vero ratione, vitae tempore quo neque!Consectetur non porro quo consequatur atque laboriosam obcaecati.Odit perspiciatis quisquam itaque voluptas enim suscipit inciduntlabore nulla deleniti, similique molestiae voluptatibus sit errorquibusdam est nostrum consequuntur aliquam optio reprehenderit quosipsa asperiores mollitia minus! Non quis dolorem molestiae optioneque consequatur nemo omnis natus voluptas.",
   },
   {
     id: 9,
@@ -127,6 +143,8 @@ export const POSTS: Post[] = [
     nbViews: 27,
     nbComments: 8,
     slug: "responsive-design-patterns-css-grid-flexbox",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi laboriosam reprehenderit ipsum at quidem? Debitis nemo omnis itaque corrupti tempora expedita, alia sapiente veniam. Ad sequi ut quaerat dolores, sint incidunt  perspiciatis id eos cum similique ducimus magnam, alias vit  necessitatibus quia quae, illum autem voluptatum corporis.Consequatur ea voluptates delectus magnam, dolore ratione dictasapiente perspiciatis? Eaque id earum tenetur nesciunt eum amet rem quas quod. Dolore iure porro odit suscipit quo. Beatae molestias, iusto sapiente, adipisci alias eos ipsum fugit expeditavoluptatibus odio doloremque cupiditate earum asperiores aut atqueodit eius eos? Iusto vero ratione, vitae tempore quo neque!Consectetur non porro quo consequatur atque laboriosam obcaecati.Odit perspiciatis quisquam itaque voluptas enim suscipit inciduntlabore nulla deleniti, similique molestiae voluptatibus sit errorquibusdam est nostrum consequuntur aliquam optio reprehenderit quosipsa asperiores mollitia minus! Non quis dolorem molestiae optioneque consequatur nemo omnis natus voluptas.",
   },
   {
     id: 10,
@@ -155,6 +173,8 @@ export const POSTS: Post[] = [
     nbViews: 24,
     nbComments: 6,
     slug: "react-hooks-deep-dive-modern-react-state-management",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi laboriosam reprehenderit ipsum at quidem? Debitis nemo omnis itaque corrupti tempora expedita, alia sapiente veniam. Ad sequi ut quaerat dolores, sint incidunt  perspiciatis id eos cum similique ducimus magnam, alias vit  necessitatibus quia quae, illum autem voluptatum corporis.Consequatur ea voluptates delectus magnam, dolore ratione dictasapiente perspiciatis? Eaque id earum tenetur nesciunt eum amet rem quas quod. Dolore iure porro odit suscipit quo. Beatae molestias, iusto sapiente, adipisci alias eos ipsum fugit expeditavoluptatibus odio doloremque cupiditate earum asperiores aut atqueodit eius eos? Iusto vero ratione, vitae tempore quo neque!Consectetur non porro quo consequatur atque laboriosam obcaecati.Odit perspiciatis quisquam itaque voluptas enim suscipit inciduntlabore nulla deleniti, similique molestiae voluptatibus sit errorquibusdam est nostrum consequuntur aliquam optio reprehenderit quosipsa asperiores mollitia minus! Non quis dolorem molestiae optioneque consequatur nemo omnis natus voluptas.",
   },
   {
     id: 12,
@@ -169,6 +189,8 @@ export const POSTS: Post[] = [
     nbViews: 31,
     nbComments: 9,
     slug: "seo-optimization-nextjs-best-practices-higher-rankings",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi laboriosam reprehenderit ipsum at quidem? Debitis nemo omnis itaque corrupti tempora expedita, alia sapiente veniam. Ad sequi ut quaerat dolores, sint incidunt  perspiciatis id eos cum similique ducimus magnam, alias vit  necessitatibus quia quae, illum autem voluptatum corporis.Consequatur ea voluptates delectus magnam, dolore ratione dictasapiente perspiciatis? Eaque id earum tenetur nesciunt eum amet rem quas quod. Dolore iure porro odit suscipit quo. Beatae molestias, iusto sapiente, adipisci alias eos ipsum fugit expeditavoluptatibus odio doloremque cupiditate earum asperiores aut atqueodit eius eos? Iusto vero ratione, vitae tempore quo neque!Consectetur non porro quo consequatur atque laboriosam obcaecati.Odit perspiciatis quisquam itaque voluptas enim suscipit inciduntlabore nulla deleniti, similique molestiae voluptatibus sit errorquibusdam est nostrum consequuntur aliquam optio reprehenderit quosipsa asperiores mollitia minus! Non quis dolorem molestiae optioneque consequatur nemo omnis natus voluptas.",
   },
   {
     id: 13,
@@ -183,6 +205,8 @@ export const POSTS: Post[] = [
     nbViews: 23,
     nbComments: 7,
     slug: "navigation-react-native-choosing-right-library",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi laboriosam reprehenderit ipsum at quidem? Debitis nemo omnis itaque corrupti tempora expedita, alia sapiente veniam. Ad sequi ut quaerat dolores, sint incidunt  perspiciatis id eos cum similique ducimus magnam, alias vit  necessitatibus quia quae, illum autem voluptatum corporis.Consequatur ea voluptates delectus magnam, dolore ratione dictasapiente perspiciatis? Eaque id earum tenetur nesciunt eum amet rem quas quod. Dolore iure porro odit suscipit quo. Beatae molestias, iusto sapiente, adipisci alias eos ipsum fugit expeditavoluptatibus odio doloremque cupiditate earum asperiores aut atqueodit eius eos? Iusto vero ratione, vitae tempore quo neque!Consectetur non porro quo consequatur atque laboriosam obcaecati.Odit perspiciatis quisquam itaque voluptas enim suscipit inciduntlabore nulla deleniti, similique molestiae voluptatibus sit errorquibusdam est nostrum consequuntur aliquam optio reprehenderit quosipsa asperiores mollitia minus! Non quis dolorem molestiae optioneque consequatur nemo omnis natus voluptas.",
   },
   {
     id: 14,
@@ -197,6 +221,8 @@ export const POSTS: Post[] = [
     nbViews: 29,
     nbComments: 8,
     slug: "sass-scss-enhancing-css-preprocessors",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi laboriosam reprehenderit ipsum at quidem? Debitis nemo omnis itaque corrupti tempora expedita, alia sapiente veniam. Ad sequi ut quaerat dolores, sint incidunt  perspiciatis id eos cum similique ducimus magnam, alias vit  necessitatibus quia quae, illum autem voluptatum corporis.Consequatur ea voluptates delectus magnam, dolore ratione dictasapiente perspiciatis? Eaque id earum tenetur nesciunt eum amet rem quas quod. Dolore iure porro odit suscipit quo. Beatae molestias, iusto sapiente, adipisci alias eos ipsum fugit expeditavoluptatibus odio doloremque cupiditate earum asperiores aut atqueodit eius eos? Iusto vero ratione, vitae tempore quo neque!Consectetur non porro quo consequatur atque laboriosam obcaecati.Odit perspiciatis quisquam itaque voluptas enim suscipit inciduntlabore nulla deleniti, similique molestiae voluptatibus sit errorquibusdam est nostrum consequuntur aliquam optio reprehenderit quosipsa asperiores mollitia minus! Non quis dolorem molestiae optioneque consequatur nemo omnis natus voluptas.",
   },
   {
     id: 15,
@@ -211,6 +237,8 @@ export const POSTS: Post[] = [
     nbViews: 36,
     nbComments: 11,
     slug: "modern-javascript-tooling-babel-webpack-beyond",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi laboriosam reprehenderit ipsum at quidem? Debitis nemo omnis itaque corrupti tempora expedita, alia sapiente veniam. Ad sequi ut quaerat dolores, sint incidunt  perspiciatis id eos cum similique ducimus magnam, alias vit  necessitatibus quia quae, illum autem voluptatum corporis.Consequatur ea voluptates delectus magnam, dolore ratione dictasapiente perspiciatis? Eaque id earum tenetur nesciunt eum amet rem quas quod. Dolore iure porro odit suscipit quo. Beatae molestias, iusto sapiente, adipisci alias eos ipsum fugit expeditavoluptatibus odio doloremque cupiditate earum asperiores aut atqueodit eius eos? Iusto vero ratione, vitae tempore quo neque!Consectetur non porro quo consequatur atque laboriosam obcaecati.Odit perspiciatis quisquam itaque voluptas enim suscipit inciduntlabore nulla deleniti, similique molestiae voluptatibus sit errorquibusdam est nostrum consequuntur aliquam optio reprehenderit quosipsa asperiores mollitia minus! Non quis dolorem molestiae optioneque consequatur nemo omnis natus voluptas.",
   },
   {
     id: 16,
@@ -225,6 +253,8 @@ export const POSTS: Post[] = [
     nbViews: 38,
     nbComments: 12,
     slug: "testing-react-components-comprehensive-guide",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi laboriosam reprehenderit ipsum at quidem? Debitis nemo omnis itaque corrupti tempora expedita, alia sapiente veniam. Ad sequi ut quaerat dolores, sint incidunt  perspiciatis id eos cum similique ducimus magnam, alias vit  necessitatibus quia quae, illum autem voluptatum corporis.Consequatur ea voluptates delectus magnam, dolore ratione dictasapiente perspiciatis? Eaque id earum tenetur nesciunt eum amet rem quas quod. Dolore iure porro odit suscipit quo. Beatae molestias, iusto sapiente, adipisci alias eos ipsum fugit expeditavoluptatibus odio doloremque cupiditate earum asperiores aut atqueodit eius eos? Iusto vero ratione, vitae tempore quo neque!Consectetur non porro quo consequatur atque laboriosam obcaecati.Odit perspiciatis quisquam itaque voluptas enim suscipit inciduntlabore nulla deleniti, similique molestiae voluptatibus sit errorquibusdam est nostrum consequuntur aliquam optio reprehenderit quosipsa asperiores mollitia minus! Non quis dolorem molestiae optioneque consequatur nemo omnis natus voluptas.",
   },
   {
     id: 17,
@@ -239,6 +269,8 @@ export const POSTS: Post[] = [
     nbViews: 34,
     nbComments: 10,
     slug: "authentication-nextjs-implementing-secure-user-authentication",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi laboriosam reprehenderit ipsum at quidem? Debitis nemo omnis itaque corrupti tempora expedita, alia sapiente veniam. Ad sequi ut quaerat dolores, sint incidunt  perspiciatis id eos cum similique ducimus magnam, alias vit  necessitatibus quia quae, illum autem voluptatum corporis.Consequatur ea voluptates delectus magnam, dolore ratione dictasapiente perspiciatis? Eaque id earum tenetur nesciunt eum amet rem quas quod. Dolore iure porro odit suscipit quo. Beatae molestias, iusto sapiente, adipisci alias eos ipsum fugit expeditavoluptatibus odio doloremque cupiditate earum asperiores aut atqueodit eius eos? Iusto vero ratione, vitae tempore quo neque!Consectetur non porro quo consequatur atque laboriosam obcaecati.Odit perspiciatis quisquam itaque voluptas enim suscipit inciduntlabore nulla deleniti, similique molestiae voluptatibus sit errorquibusdam est nostrum consequuntur aliquam optio reprehenderit quosipsa asperiores mollitia minus! Non quis dolorem molestiae optioneque consequatur nemo omnis natus voluptas.",
   },
   {
     id: 18,
@@ -267,6 +299,8 @@ export const POSTS: Post[] = [
     nbViews: 30,
     nbComments: 9,
     slug: "css-in-js-styling-react-applications-styled-components",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi laboriosam reprehenderit ipsum at quidem? Debitis nemo omnis itaque corrupti tempora expedita, alia sapiente veniam. Ad sequi ut quaerat dolores, sint incidunt  perspiciatis id eos cum similique ducimus magnam, alias vit  necessitatibus quia quae, illum autem voluptatum corporis.Consequatur ea voluptates delectus magnam, dolore ratione dictasapiente perspiciatis? Eaque id earum tenetur nesciunt eum amet rem quas quod. Dolore iure porro odit suscipit quo. Beatae molestias, iusto sapiente, adipisci alias eos ipsum fugit expeditavoluptatibus odio doloremque cupiditate earum asperiores aut atqueodit eius eos? Iusto vero ratione, vitae tempore quo neque!Consectetur non porro quo consequatur atque laboriosam obcaecati.Odit perspiciatis quisquam itaque voluptas enim suscipit inciduntlabore nulla deleniti, similique molestiae voluptatibus sit errorquibusdam est nostrum consequuntur aliquam optio reprehenderit quosipsa asperiores mollitia minus! Non quis dolorem molestiae optioneque consequatur nemo omnis natus voluptas.",
   },
   {
     id: 20,
@@ -281,5 +315,7 @@ export const POSTS: Post[] = [
     nbViews: 37,
     nbComments: 11,
     slug: "functional-programming-javascript-principles-practices",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi laboriosam reprehenderit ipsum at quidem? Debitis nemo omnis itaque corrupti tempora expedita, alia sapiente veniam. Ad sequi ut quaerat dolores, sint incidunt  perspiciatis id eos cum similique ducimus magnam, alias vit  necessitatibus quia quae, illum autem voluptatum corporis.Consequatur ea voluptates delectus magnam, dolore ratione dictasapiente perspiciatis? Eaque id earum tenetur nesciunt eum amet rem quas quod. Dolore iure porro odit suscipit quo. Beatae molestias, iusto sapiente, adipisci alias eos ipsum fugit expeditavoluptatibus odio doloremque cupiditate earum asperiores aut atqueodit eius eos? Iusto vero ratione, vitae tempore quo neque!Consectetur non porro quo consequatur atque laboriosam obcaecati.Odit perspiciatis quisquam itaque voluptas enim suscipit inciduntlabore nulla deleniti, similique molestiae voluptatibus sit errorquibusdam est nostrum consequuntur aliquam optio reprehenderit quosipsa asperiores mollitia minus! Non quis dolorem molestiae optioneque consequatur nemo omnis natus voluptas.",
   },
 ];
