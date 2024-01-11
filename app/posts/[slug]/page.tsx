@@ -1,11 +1,11 @@
+ "use client"
  
-
-import { POSTS } from "@/utils/posts";
 
 import { MessageCircle, Eye } from "lucide-react";
 import PageContainer from "@/components/page-container";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
+import { usePost } from "@/hooks/usePost";
 
 
 
@@ -16,13 +16,14 @@ type Params = {
 };
 
 export default function Postspage({ params }: Params) {
-  // on recupère les posts que l'on filter selon le slug
 
-  const [post] = POSTS.filter((post) => post.slug === params.slug);
+  const {slug} = params;
+  const {data: post, isFetching, error, isSuccess} = usePost(slug);
 
   return (
     <PageContainer>
-      <article>
+      {isSuccess && 
+            <article>
         <div className="h-[100%] text-center bg-[url('/img/coding.jpg')] bg-cover min-h-[400px] m-5 rounded-lg flex flex-col items-center justify-center">
           <div className="bg-black bg-opacity-20 mx-10 rounded-xl">
             <h1 className=" l:max-w-ml font-bold  text-[4rem]">{post.title}</h1>
@@ -33,7 +34,7 @@ export default function Postspage({ params }: Params) {
             <Avatar>
               <AvatarImage src="" />
               <AvatarFallback className="bg-green-700">
-                {post.author.substring(0, 1)}
+                {/* {post.author.substring(0, 1)} */}
               </AvatarFallback>
             </Avatar>
 
@@ -41,19 +42,21 @@ export default function Postspage({ params }: Params) {
               {post.author.substring(0, 1)}
             </div> */}
             <div>
-              <div>{post.author}</div>
-              <div className="text-slate-500 text-sm">
-                Posted on : {new Date(post.date).toLocaleDateString()}
+              {/* <div>{post.author}</div> */}
+              {post?.createdAt &&
+                           <div className="text-slate-500 text-sm">
+                Posted on : {new Date(post.createdAt).toLocaleDateString()}
               </div>
+              }
             </div>
           </div>
 
           <div className="flex flex-row ">
             <div className="flex flex-row ">
-              <MessageCircle className="mr-2" /> {post.nbComments}
+              <MessageCircle className="mr-2" /> {post?.nbComments}
             </div>
             <div className="flex flex-row mx-6">
-              <Eye className="mr-2" /> {post.nbViews}
+              <Eye className="mr-2" /> {post?.view}
             </div>
           </div>
         </div>
@@ -66,7 +69,7 @@ export default function Postspage({ params }: Params) {
           <div 
             className="my-6"
             dangerouslySetInnerHTML={{
-              __html: post.content  || "",
+              __html: post?.content  || "",
             }}>
           </div>
 
@@ -75,6 +78,8 @@ export default function Postspage({ params }: Params) {
           <Separator />
         </div>
       </article>
+      }
+
     </PageContainer>
   );
 }

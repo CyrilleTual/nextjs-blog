@@ -4,12 +4,18 @@ import PageContainer from "@/components/page-container";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { CATEGORIES } from "@/utils/categories";
-import { POSTS } from "@/utils/posts";
 import { Category } from "@/types";
 import Link from "next/link";
 import PostsList from "@/components/posts-list";
+import { usePosts } from "@/hooks/usePosts";
+ 
 
 export default function Home() {
+
+  // immportations des posts 
+
+  const { data: items, isFetching, error, isSuccess } = usePosts();
+
   return (
     <PageContainer>
       <div>
@@ -38,9 +44,8 @@ export default function Home() {
         </div>
 
         {/* cartes */}
-        <PostsList items={POSTS} />
+        <PostsList items={items} />
 
-       
       </div>
     </PageContainer>
   );

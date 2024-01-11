@@ -16,5 +16,5 @@ export type Post = {
   nbViews: number;
   nbComments: number;
   slug: string;
-  content?: string;
+  content: string;
 };

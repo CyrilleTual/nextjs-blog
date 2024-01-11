@@ -159,6 +159,7 @@ export const POSTS: Post[] = [
     nbViews: 33,
     nbComments: 10,
     slug: "es6-features-javascript-developers-should-know",
+     content:"ojhbuhij"
   },
   {
     id: 11,
@@ -285,6 +286,7 @@ export const POSTS: Post[] = [
     nbViews: 26,
     nbComments: 7,
     slug: "optimizing-react-native-apps-performance-best-practices",
+     content:"kojhkbuhj"
   },
   {
     id: 19,
