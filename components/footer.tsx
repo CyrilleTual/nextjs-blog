@@ -1,11 +1,15 @@
+"use client"
 import React from 'react'
 import PageContainer from './page-container'
-import { CATEGORIES } from '@/utils/categories';
-import { Category } from '@/types';
+import { Category } from '@prisma/client';
 import Link from 'next/link';
 import { Button } from './ui/button';
+import { useCategories } from '@/hooks/useCategories';
 
 export default function Footer() {
+
+  const { data: CATEGORIES } = useCategories(); 
+
   return (
     <footer className="p-4 border-t">
       <PageContainer>
@@ -14,9 +18,9 @@ export default function Footer() {
             NextBlog
           </p>
           <div className="flex flex-col md:flex-row gap-2 items-center">
-            {CATEGORIES.map((category: Category) => (
+            {CATEGORIES?.map((category: Category) => (
               <Link key={category.id} href={`/categories/${category.slug} `}>
-                <Button variant={"ghost"}> {category.name}</Button>
+                <Button variant={"ghost"}> {category.title}</Button>
               </Link>
             ))}
             <Button variant={"ghost"}>

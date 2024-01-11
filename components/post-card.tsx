@@ -1,4 +1,4 @@
-import { Post } from "@prisma/client";
+ 
 import {
   Card,
   CardContent,
@@ -11,9 +11,10 @@ import Image from "next/image";
 import { badgeVariants } from "@/components/ui/badge";
 import { MessageCircle, Eye } from "lucide-react";
 import Link from "next/link";
+import { PostWithCategory } from "@/types";
 
 type Props = {
-  post: Post;
+  post: PostWithCategory;
 };
 
 export default function PostCard({ post }: Props) {
@@ -45,7 +46,7 @@ export default function PostCard({ post }: Props) {
             className={` ${badgeVariants({ variant: "outline" })} !p-2`}
             // href={`/categories/${post.category.toLowerCase()}`}
           >
-            {/* {post.category} */}
+             {post.cat.title} 
           </div>
           <div className="flex flex-row">
             <MessageCircle className="mr-2" /> {post.nbComments}

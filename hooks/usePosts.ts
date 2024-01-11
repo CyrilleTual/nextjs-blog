@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
 import axios from "axios";
-import { Post } from "@prisma/client";
+
 
 // const getAllPosts = async () => {
 //   const { data } = await axios.get(`../api/posts`);
@@ -19,6 +19,20 @@ import { Post } from "@prisma/client";
 export function usePosts() {
   return useQuery("posts", async () => {
     const { data } = await axios.get(`../api/posts`);
-    return data as Post[];
+    return data;
   });
+}
+
+const getPostByCatSlug = async (slug: string) => {
+  const { data } = await axios.get(`../api/posts/byCategory/${slug}`);
+
+  return data 
+};
+
+export function usePostsByCategory(slug: string) {
+ return useQuery({
+   queryKey: ["post", slug],
+   queryFn: () => getPostByCatSlug(slug),
+   enabled: !!slug, // execute que si on a un slug
+ });
 }

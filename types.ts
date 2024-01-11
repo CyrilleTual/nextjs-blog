@@ -1,3 +1,5 @@
+import { Prisma } from "@prisma/client"
+
 export type Category = {
   id: number;
   name: string;
@@ -18,3 +20,8 @@ export type Post = {
   slug: string;
   content: string;
 };
+
+// nouveau type crée car on recupère les données de 2 tables 
+export type PostWithCategory  = Prisma.PostGetPayload<{
+  include: { cat: true}; 
+}>
