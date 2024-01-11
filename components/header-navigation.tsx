@@ -13,23 +13,32 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { CATEGORIES } from "@/utils/categories";
-import { Category } from "@/types";
+import { useCategories } from "@/hooks/useCategories";
+import { Category } from "@prisma/client";
 
 export function HeaderNavigation() {
+
+   
+
+    const { data: categories, isSuccess: categoriesSuccess } = useCategories(); 
+
+
+
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Categories</NavigationMenuTrigger>
           <NavigationMenuContent>
+
             <ul className="grid w-[400px] gap-2 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {CATEGORIES.map((category: Category) => (
+              {categories?.map((category: Category) => (
                 <ListItem
                   key={category.id}
                   href={`/categories/${category.slug} `}
                 >
-                  {category.name}
+                  {category.title}
                 </ListItem>
               ))}
             </ul>

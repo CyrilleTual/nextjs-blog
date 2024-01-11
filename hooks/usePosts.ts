@@ -14,10 +14,11 @@ import { Post } from "@prisma/client";
 // }
 
 // même chose mais plus concentré :
+ 
 
 export function usePosts() {
   return useQuery("posts", async () => {
     const { data } = await axios.get(`../api/posts`);
-    return data as Post;
+    return data as Post[];
   });
 }

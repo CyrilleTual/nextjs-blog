@@ -1,44 +1,40 @@
+"use client";
 import PageContainer from "@/components/page-container";
 import PostCard from "@/components/post-card";
 import PageTitle from "@/components/ui/page-title";
-import { POSTS } from "@/utils/posts";
+import { usePosts } from "@/hooks/usePosts";
+import { useEffect, useState } from "react";
+import { Post } from "@prisma/client";
 
 type Params = {
   params: {
     slug: string;
   };
 };
+type PostsData = Post[];
 
 export default function Caterorypage({ params }: Params) {
- 
-  // en fonction du slug on retourne le nom de la catégorie (dans la db)
- const value = (() => {
-   switch (params.slug) {
-     case "react":
-       return "React";
-     case "react-native":
-       return "React Native";
-     case "nextjs":
-       return "Next.js";
-     case "css":
-       return "CSS";
-     case "javascript":
-       return "JavaScript";
-     default:
-       return ""; // or any default value you want
-   }
- })();
-  
+  const { slug } = params;
 
- // on filtre les posts
-  const items = POSTS.filter((post) => post.category === value);
+
+  //// Methode 1 on recupère tous les posts et on les trie ensuite
+  const { data: POSTS , isFetching, error, isSuccess } = usePosts();
+  const [items, setItems] = useState<PostsData | undefined>();
+  useEffect(() => {
+    if (isSuccess) {
+      setItems(POSTS.filter((post:Post) => post.catSlug === slug));
+    }
+  }, [isSuccess, POSTS, slug]);
+
+  /// methode 2 -> requête pour ne recupérer que les posts utiles 
+
+
 
   return (
     <>
       {items && (
         <PageContainer>
-          <PageTitle title={value} />
-           
+          <PageTitle title={ slug.charAt(0).toUpperCase() + slug.slice(1)} />
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-6">
             {items.map((post) => (
               <PostCard key={post.id} post={post} />

@@ -1,12 +1,16 @@
-// requète GET sur la route /api/catégorie
+import { NextResponse } from "next/server";
+import prisma from "@/lib/connect";
 
-
-import { CATEGORIES } from "@/utils/categories"
-import { NextResponse } from "next/server"
- 
-
-export const GET = async  () => {
-
-    return  NextResponse.json(CATEGORIES, {status:200})
-
-}
+export const GET = async () => {
+  try {
+    const categories = await prisma.category.findMany();
+    return NextResponse.json(categories, { status: 200 });
+  } catch (error) {
+    return NextResponse.json(
+      {
+        error: "Something went wrong!",
+      },
+      { status: 500 }
+    ); /// internal server error
+  }
+};

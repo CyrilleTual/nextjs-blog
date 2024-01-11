@@ -1,13 +1,13 @@
 "use client";
-
 import PageContainer from "@/components/page-container";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { CATEGORIES } from "@/utils/categories";
-import { Category } from "@/types";
 import Link from "next/link";
 import PostsList from "@/components/posts-list";
 import { usePosts } from "@/hooks/usePosts";
+import { useCategories } from "@/hooks/useCategories";
+import { Category } from "@prisma/client";
+ 
  
 
 export default function Home() {
@@ -15,8 +15,11 @@ export default function Home() {
   // immportations des posts 
 
   const { data: items, isFetching, error, isSuccess } = usePosts();
-
+  const { data: categories, isSuccess: categoriesSuccess} = useCategories(); 
+      
   return (
+
+
     <PageContainer>
       <div>
         {/* landing */}
@@ -35,13 +38,16 @@ export default function Home() {
         </section>
 
         {/* boutons de nav */}
-        <div className="flex flex-col md:flex-row gap-5 items-center justify-center">
-          {CATEGORIES.map((category: Category) => (
+        { categoriesSuccess &&
+                <div className="flex flex-col md:flex-row gap-5 items-center justify-center">
+          {categories.map((category: Category) => (
             <Link key={category.id} href={`/categories/${category.slug} `}>
-              <Button variant={"outline"}> {category.name}</Button>
+              <Button variant={"outline"}> {category.title}</Button>
             </Link>
           ))}
         </div>
+
+        }
 
         {/* cartes */}
         <PostsList items={items} />
