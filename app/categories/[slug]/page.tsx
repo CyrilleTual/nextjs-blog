@@ -1,5 +1,6 @@
 import PageContainer from "@/components/page-container";
 import PostCard from "@/components/post-card";
+import PageTitle from "@/components/ui/page-title";
 import { POSTS } from "@/utils/posts";
 
 type Params = {
@@ -24,7 +25,7 @@ export default function Caterorypage({ params }: Params) {
      case "javascript":
        return "JavaScript";
      default:
-       return null; // or any default value you want
+       return ""; // or any default value you want
    }
  })();
   
@@ -36,7 +37,8 @@ export default function Caterorypage({ params }: Params) {
     <>
       {items && (
         <PageContainer>
-          <h1 className="text-center mt-2 ">{value}</h1>
+          <PageTitle title={value} />
+           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-6">
             {items.map((post) => (
               <PostCard key={post.id} post={post} />
