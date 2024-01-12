@@ -11,11 +11,15 @@ export const GET = async (req: Request, { params }: Params) => {
   const { slug } = params;
   try {
     
-    const post = await prisma.post.findUnique({
+    const post = await prisma.post.update({
       where: {
         slug: slug,
-      }
+      },
+      data: {
+        view: {increment:1},
+      },
     });
+
     return NextResponse.json(post, { status: 200 });
   } catch (error) {
     return NextResponse.json(
