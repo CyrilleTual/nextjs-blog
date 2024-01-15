@@ -19,19 +19,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <QueryProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <AuthProvider>
-             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="flex flex-col justify-between min-h-screen">
-              <Header />
-              {/* Pour que le contenu de la page prenne tout le place mais se colle en ht */}
-              <div className="flex-grow"> {children}</div>
-              <Footer />
-            </div>
-          </ThemeProvider>
+            <QueryProvider>
+              <div className="flex flex-col justify-between min-h-screen">
+                <Header />
+                {/* Pour que le contenu de la page prenne tout le place mais se colle en ht */}
+                <div className="flex-grow"> {children}</div>
+                <Footer />
+              </div>
+            </QueryProvider>
           </AuthProvider>
-         
-        </QueryProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
