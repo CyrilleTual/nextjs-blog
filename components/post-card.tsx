@@ -29,9 +29,9 @@ export default function PostCard({ post }: Props) {
         <CardHeader>
           <div className="aspect-square relative">
             <Image
-              src={"/img/coding.jpg"}
-              alt="post.title"
-              priority={false}
+              src={post.image || "/img/default.jpg"}
+              alt={post.title}
+              priority={false} 
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="aspact-sqauare object-cover transition-all duration-300 hover:scale-110 rounded-md"
@@ -46,7 +46,7 @@ export default function PostCard({ post }: Props) {
             className={` ${badgeVariants({ variant: "outline" })} !p-2`}
             // href={`/categories/${post.category.toLowerCase()}`}
           >
-             {post.cat.title} 
+            {post.cat.title}
           </div>
           <div className="flex flex-row">
             <MessageCircle className="mr-2" /> {post.nbComments}
