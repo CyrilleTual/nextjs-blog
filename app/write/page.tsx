@@ -20,7 +20,8 @@ import { Button } from "@/components/ui/button";
 import axios from "axios";
 import { json } from "stream/consumers";
 import { useMutation } from "react-query";
-
+import { Post } from "@prisma/client";
+import { slugify } from "@/lib/slugidy";
 
 
 
@@ -46,26 +47,30 @@ export default function WritePage() {
 
   const [article, setArticle] = useState<ArticleType>(defaultValues);
 
-  
-
   const handleChange = (key: string, value: string) => {
     setArticle((article) => ({ ...article, [key]: value }));
   };
 
   ///// post -> utilisation de react query 
-
-  const {mutate, isLoading}= useMutation((newPost: Partial<Post>) => axios.post("/posts", newPost),{
+ const {mutate, isLoading}= useMutation((newPost: Partial<Post>) => axios.post("/api/posts", newPost),{
     onSuccess : data => {console.log ("sucess", data)}
   });
+
  
+  const handlClick = async (e: SyntheticEvent) =>{
+    const {title, catSlug, content} = article
 
-  const handlClick = (e: SyntheticEvent) =>{
+    // toDo : verifier les values 
+
     e.preventDefault();
-    await mutate ({
-      // ici l'objet à inserer 
-    })
-  
-
+     await mutate({
+       title: title,
+       content: content,
+       userEmail: session?.data?.user?.email! ,
+       catSlug: catSlug,
+       slug: slugify(title),
+       image: "/img/coding.jpg"
+     });
   }
 
   return (
@@ -84,8 +89,8 @@ export default function WritePage() {
           />
           {/* category */}
           <Select
-            name="category"
-            onValueChange={(e) => handleChange("category", e)}
+            name="catSlug"
+            onValueChange={(e) => handleChange("catSlug", e)}
           >
             <SelectTrigger className="w-[180px]">
               <SelectValue placeholder="Theme" />
@@ -111,7 +116,7 @@ export default function WritePage() {
             value={article.content}
             onChange={(value) => handleChange("content", value)}
           />
-          <Button className=" mt-6 text-center p-auto" onClick={handlClick}> Publier  </Button>
+          <Button className=" mt-6 text-center p-auto" onClick={(e)=>handlClick(e)}> Publier  </Button>
         </div>
       </PageContainer>
     )

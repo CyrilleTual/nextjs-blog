@@ -46,22 +46,26 @@ export const GET = async (req: Request) => {
 };
 
 export const POST = async (req: Request, res: Response) => {
+
+  
   ////////////////////////////////////////////////////
   //// protection par auth de la route
   const session = await getAuthSession();
   if (!session || !session.user) {
     return NextResponse.json({ message: "Not Authenticated" }, { status: 403 });
   }
-  /////////////////////////////////////////////////////////////////////////
 
   // recupération des données du POST
   try {
+    // recupération des données du post
     const body = await req.json();
 
+    // requete vers la database avec prisma
     const post = await prisma.post.create({
       data: { ...body, userEmail: session.user.email },
     });
 
+    // retour de la requète
     return NextResponse.json(post, { status: 200 });
   } catch (error) {
     return NextResponse.json(
