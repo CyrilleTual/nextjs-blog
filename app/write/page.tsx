@@ -28,7 +28,9 @@ const ReactQuill = dynamic(() => import("react-quill"), {
   loading: () => <p>Loading...</p>,
   ssr: false,
 });
- 
+
+/////////  Pour vercel blob storing 
+import type { PutBlobResult } from "@vercel/blob";
  
 
 /**
@@ -78,22 +80,46 @@ export default function WritePage() {
     setImageObjectUrl(URL.createObjectURL(files[0])); // on créé l'url du file pour affichage
   };
 
-  const uploadImage = async () =>{
- 
+
+  ///////  upload version locale //////////////////////////////////
+  // const uploadImage = async () =>{
+  //   try {
+  //     if (!file) return;
+  //     // le file va être envoyé à l'aide d'un fom-data
+  //     const data =  new FormData();
+  //     data.set("file", file)
+  //     const response = await axios.post('/api/upload', data)
+  //     return response.data /// url de l'image sur le serveur
+      
+  //   } catch (error) {
+  //     console.log ("Error upload file", error)
+  //   }
+  // }
+
+
+  ///////// upload version vercel ////////////////////////////////******************* */
+  const uploadImage = async () => {
     try {
       if (!file) return;
-      // le file va être envoyé à l'aide d'un fom-data
-      const data =  new FormData();
-      data.set("file", file)
-      const response = await axios.post('/api/upload', data)
-      return response.data /// url de l'image sur le serveur
-      
-    } catch (error) {
-      console.log ("Error upload file", error)
-    }
-  }
 
-  
+      const response = await fetch (`/api/upload?filename=${file.name}`, {
+        method: "POST",
+        body: file,
+      });
+      const blob = (await response.json()) as PutBlobResult;
+
+      console.log (blob)
+       
+      return blob.url  // on retourne l'url de la photo télé
+
+    } catch (error) {
+      console.log("Error upload file", error);
+    }
+  };
+  ////////////////////////////////////////////////////////////////******************* */
+
+
+
 
   ///// post -> utilisation de react query
   const { mutate, isLoading } = useMutation(
@@ -114,7 +140,8 @@ export default function WritePage() {
     // toDo : verifier les values
     e.preventDefault();
 
-    const data = await uploadImage(); 
+    //const data = await uploadImage(); 
+    const urlImg = await uploadImage(); 
    
     await mutate({
       title: title,
@@ -122,7 +149,8 @@ export default function WritePage() {
       userEmail: session?.data?.user?.email!,
       catSlug: catSlug,
       slug: slugify(title),
-      image: data.imageUrl || "/img/coding.jpg",
+      //image: data.imageUrl || "/img/coding.jpg",
+      image: urlImg || "/img/coding.jpg",         ///////// mofifie pour vercel
     });
   };
 
