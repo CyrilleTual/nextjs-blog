@@ -1,6 +1,6 @@
 "use client";
 import axios from "axios";
-import { SyntheticEvent, useState } from "react";
+import { SyntheticEvent, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import PageContainer from "@/components/page-container";
@@ -15,14 +15,19 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useCategories } from "@/hooks/useCategories";
-import ReactQuill from "react-quill";
+//import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
+import dynamic from "next/dynamic";
 import { useMutation } from "react-query";
 import { Post } from "@prisma/client";
 import { slugify } from "@/lib/slugidy";
 import { cpSync } from "fs";
 import { Divide} from "lucide-react";
 import Image from "next/image";
+const ReactQuill = dynamic(() => import("react-quill"), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
  
  
 
@@ -33,7 +38,16 @@ export default function WritePage() {
   const { data: categories, isFetching } = useCategories();
   const session = useSession();
   const router = useRouter();
-  if (session.status !== "authenticated") router.replace("./login");
+
+  //if (session.status !== "authenticated") router.replace("./login");
+  useEffect(() => {
+    if (!session) {
+      router.replace("/login");
+      return;
+    }
+  }, [router, session]);
+
+
   type ArticleType = {
     title: string;
     catSlug: string;
