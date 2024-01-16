@@ -10,12 +10,14 @@ import {
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { CATEGORIES } from "@/utils/categories";
-import { Category } from "@/types";
+//import { CATEGORIES } from "@/utils/categories";
+import { useCategories } from "@/hooks/useCategories";
+import { Category } from "@prisma/client";
 import { useEffect, useState } from "react";
 
 export default function ResponsiveMenu() {
   const [open, setOpen] = useState(false);
+  const { data: categories, isSuccess: categoriesSuccess } = useCategories(); 
 
   return (
     <>
@@ -32,14 +34,15 @@ export default function ResponsiveMenu() {
                 </Button>
               </Link>
               <p>Catégories</p>
-              {CATEGORIES.map((categorie: Category) => (
+
+              {categories && categories.map((categorie: Category) => (
                 <Link
                   key={categorie.id}
                   className="block  px-2 py-2 text-lg"
                   href={`/categories/${categorie.slug}`}
                 >
                   <Button className=" px-2 py-2 text-lg" variant={"ghost"}>
-                    {categorie.name}
+                    {categorie.title}
                   </Button>
                 </Link>
               ))}
