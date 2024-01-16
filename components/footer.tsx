@@ -5,6 +5,7 @@ import { Category } from '@prisma/client';
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { useCategories } from '@/hooks/useCategories';
+import { blogName } from '@/utils/constants';
 
 export default function Footer() {
 
@@ -15,7 +16,7 @@ export default function Footer() {
       <PageContainer>
         <div className="flex flex-col md:flex-row items-center justify-between">
           <p className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-red-400 to bg-blue-600">
-            NextBlog
+            {blogName}
           </p>
           <div className="flex flex-col md:flex-row gap-2 items-center">
             {CATEGORIES?.map((category: Category) => (

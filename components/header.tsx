@@ -5,6 +5,7 @@ import ProfileButton from "./profile-button";
 import Link from "next/link";
 import ResponsiveMenu from "./responsive-menu";
 import ToggleTheme from "./toggle-theme";
+import { blogName } from "@/utils/constants";
 
 export default function Header() {
   return (
@@ -15,7 +16,7 @@ export default function Header() {
             <ResponsiveMenu />
             <Link href={"/"}>
               <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-red-400 to bg-blue-600">
-                NextBlog
+                {blogName}
               </h1>
             </Link>
 
@@ -24,7 +25,7 @@ export default function Header() {
           <HeaderNavigation />
 
           <div className="flex items-center gap-2">
-            <ToggleTheme/>
+            <ToggleTheme />
             <ProfileButton />
           </div>
         </div>
