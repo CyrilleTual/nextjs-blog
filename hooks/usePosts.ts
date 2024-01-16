@@ -25,7 +25,6 @@ export function usePosts() {
 
 const getPostByCatSlug = async (slug: string) => {
   const { data } = await axios.get(`../api/posts/byCategory/${slug}`);
-
   return data 
 };
 

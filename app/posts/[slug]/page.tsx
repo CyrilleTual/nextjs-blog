@@ -1,5 +1,4 @@
- "use client"
- 
+"use client"
 
 import { MessageCircle, Eye } from "lucide-react";
 import PageContainer from "@/components/page-container";
@@ -7,6 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { usePost } from "@/hooks/usePost";
 import Image from "next/image";
+import Comments from "@/components/comments";
 
 
 
@@ -72,20 +72,25 @@ export default function Postspage({ params }: Params) {
               </div>
             </div>
           </div>
+
           <div className="m-3">
             <Separator />
             {/* fonctionne mais ne permet pas de mise en page */}
             {/* <p className="my-5">{post.content || ""}</p> */}
 
-            {/* Pour  pourvoir exploiter une mise en page en inserant du htmt */}
+            {/* Pour  pourvoir exploiter une mise en page en inserant du html */}
             <div
               className="my-6"
               dangerouslySetInnerHTML={{
                 __html: post?.content || "",
               }}
             ></div>
+            
+          </div>
 
-            <Separator />
+          {/********** Commentaires  ***********/}
+          <div className="m-3">
+            <Comments postSlug={post?.slug}/>
           </div>
         </article>
       )}

@@ -25,3 +25,7 @@ import { Prisma } from "@prisma/client"
 export type PostWithCategory  = Prisma.PostGetPayload<{
   include: { cat: true}; 
 }>
+
+export type CommentWithUser = Prisma.CommentGetPayload<{
+  include: { user: true};
+}>
