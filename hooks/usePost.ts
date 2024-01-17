@@ -5,11 +5,9 @@ import axios from "axios";
 import { Post } from "@prisma/client";
 
 const getPostBySlug = async (slug: string)=>{
-
     const { data } = await axios.get(
       `../api/posts/${slug}`
     );
-
     return data as Post; 
 }
 

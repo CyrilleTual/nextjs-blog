@@ -127,10 +127,7 @@ export default function WritePage() {
     .then((res)=> res.data),
     {
       onSuccess: (data : Post) =>  {
-
-        router.push(`/posts/${data.slug}`)
-
-       
+        router.push(`/posts/${data.slug}`)  // redirection une fois l'aricle posté
       },
     }
   );
